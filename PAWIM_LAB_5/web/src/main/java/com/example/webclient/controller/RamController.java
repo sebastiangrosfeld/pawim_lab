@@ -2,7 +2,6 @@ package com.example.webclient.controller;
 
 import com.example.webclient.model.Ram;
 import com.example.webclient.service.RamService;
-import com.example.webclient.view.GpuForm;
 import com.example.webclient.view.RamForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
