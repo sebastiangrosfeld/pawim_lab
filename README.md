@@ -7,3 +7,4 @@ Projekty laboratoryjne z zajęć "Programowanie aplikacji mobilnych i webowych, 
 * lab_3_4 : https://youtu.be/OxDMF9cNhwo (zapomniałem wsponieć że baza postgresql jest trzymana w docker)
 * lab_5 : https://youtu.be/tpONQCycipE
 * lab_6 : https://youtu.be/TD_5G8-i0yg
+* lab_7 : https://youtu.be/IeYx-oYfuEI
