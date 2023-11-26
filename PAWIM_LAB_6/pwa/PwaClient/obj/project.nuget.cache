@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QevBaeCsxNTYaqXc9wsFNSwtcYYk1K0ok2rj6Am8cgV1EutwCiIAiTbfOtEPHfoFUXblCDzSwW8jxy6xUsdrnQ==",
+  "dgSpecHash": "qCLjoiqo9+EGmvgwVV2Asadp37RwulRv/awCpdO1yXBrN66f6K1zwu5sDiMsyKqXdbYQk+pb1x8SOKpb588xvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sebastian\\PAWIM_LAB\\pawim_lab\\PAWIM_LAB_6\\pwa\\PwaClient\\PwaClient.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,9 @@
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.jsinterop\\7.0.14\\microsoft.jsinterop.7.0.14.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.14\\microsoft.jsinterop.webassembly.7.0.14.nupkg.sha512",
+    "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.0\\microsoft.net.sdk.webassembly.pack.8.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
