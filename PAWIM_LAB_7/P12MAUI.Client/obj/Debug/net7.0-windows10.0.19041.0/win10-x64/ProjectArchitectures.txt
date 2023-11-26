@@ -1,0 +1,1 @@
+C:\Users\Sebastian\PAWIM_LAB\pawim_lab\PAWIM_LAB_7\P12MAUI.Client\P12MAUI.Client.csproj;x64

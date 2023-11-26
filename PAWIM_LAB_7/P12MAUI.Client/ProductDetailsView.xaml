@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="P12MAUI.Client.ComputerDetailsView"
+    Title="{Binding Computer.Name}">
+    <VerticalStackLayout>
+        <Grid BindingContext="{Binding Computer}" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Name:" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Text="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Type:" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Text="{Binding Type}" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="EnclosureName:" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Grid.Row="2" Grid.Column="1" Text="{Binding EnclousureName}" />
+
+            <Label Text="CpuName:" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Text="{Binding CpuNmae}" Grid.Row="3" Grid.Column="1" />
+
+            <Label Text="Hard Disk Capacity:" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Text="{Binding HardDiskCapacity}" Grid.Row="4" Grid.Column="1" />
+
+            <Label Text="Power Supply:" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Text="{Binding PowerSupply}" Grid.Row="5" Grid.Column="1" />
+
+            <Label Text="Price:" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry Text="{Binding Price}" Grid.Row="6" Grid.Column="1" />
+        </Grid>
+        <HorizontalStackLayout HorizontalOptions="End">
+            <Button
+                Command="{Binding DeleteCommand}"
+                Text="Delete" TextColor="White" BackgroundColor="Red">
+
+            </Button>
+
+            <Button
+                Command="{Binding SaveCommand}"
+                Text="Save" TextColor="Black">
+
+            </Button>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
