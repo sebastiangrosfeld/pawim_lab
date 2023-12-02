@@ -85,8 +85,16 @@
       "url": "sample-data\/weather.json"
     },
     {
+      "hash": "sha256-lOCs45frNf+D7me6lKLgUhRCdt4VwHCp9H6Ct+YWzfs=",
+      "url": "_framework\/blazor.webassembly.js"
+    },
+    {
       "hash": "sha256-uW10ZX+9Ve7DjJLoe9E4fs8gbpdEkyrgQTm0HThb6Oc=",
       "url": "PwaClient.styles.css"
+    },
+    {
+      "hash": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
+      "url": "_framework\/Blazored.LocalStorage.dll"
     },
     {
       "hash": "sha256-D1Cpv8dUhVhigWOZxMvQ0dgeOCRgaFoDpnRrjK\/cjRM=",
@@ -95,6 +103,10 @@
     {
       "hash": "sha256-exYLeZNL1vFA3MQumWi+ZzcFWgY5X7qZZcnV1h6Ae9s=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
+    },
+    {
+      "hash": "sha256-iVD57kKdinw3mOlAiTROHXZAMKltekmum5b\/bcZAmUU=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "hash": "sha256-p85TpgJG4JgyaEcSwPMg5usQsPzPBSfXz6JhiPcRdyI=",
@@ -865,10 +877,6 @@
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
-      "url": "_framework\/icudt.dat"
-    },
-    {
       "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
       "url": "_framework\/icudt_CJK.dat"
     },
@@ -881,21 +889,17 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-f+um4dHNe+71cyyh\/Q3PkMBgkNpnW622EDQlVpottdA=",
+      "hash": "sha256-h2I4Q+d+s82SncL2PEMXlayyHAbN+hACn4+EquQ0L8Y=",
       "url": "_framework\/PwaClient.dll"
     },
     {
-      "hash": "sha256-i4yFLJcfRSJmnSfz9lDUYKDGn9mD4tIYiS885493GkM=",
+      "hash": "sha256-sTeibrZ2x+xPkyW5GzYJEZzaAsOfRmAKX3wdHywgn0I=",
       "url": "_framework\/PwaClient.pdb"
     },
     {
-      "hash": "sha256-lOCs45frNf+D7me6lKLgUhRCdt4VwHCp9H6Ct+YWzfs=",
-      "url": "_framework\/blazor.webassembly.js"
-    },
-    {
-      "hash": "sha256-UwtEbaaWj1GuQL0VLHmUJo5h+\/UeA+p9HKMpfM7vHJY=",
+      "hash": "sha256-IK\/WHxSungQF05UkSPPqmHtv6BjJ0SFpZPQ6XD\/d1Kc=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "7kw0YkLH"
+  "version": "bjj+4TCH"
 };

@@ -1,6 +1,8 @@
 @page "/rams/create"
 @inject HttpClient HttpClient
 
+@attribute [Authorize]
+
 <h1>New Ram</h1>
 
 @if (isFormSubmitted)

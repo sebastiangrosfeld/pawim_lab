@@ -1,6 +1,8 @@
 @page "/gpus/update/{name}"
 @inject HttpClient HttpClient
 
+@attribute [Authorize]
+
 <h1>Update Gpu</h1>
 
 @if (isFormSubmitted)

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "qCLjoiqo9+EGmvgwVV2Asadp37RwulRv/awCpdO1yXBrN66f6K1zwu5sDiMsyKqXdbYQk+pb1x8SOKpb588xvg==",
+  "dgSpecHash": "Ve8gt0m8gQ+ZkMuIpjTQd6IyPdw7DCffy0zV1OhU1HFITmX/yRVCvZjDcwyQWfNaO0fAjB2/vJ5l6x5hG2NInQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastian\\PAWIM_LAB\\pawim_lab\\PAWIM_LAB_6\\pwa\\PwaClient\\PwaClient.csproj",
+  "projectFilePath": "C:\\Users\\Sebastian\\PAWIM_LAB\\pawim_lab\\PAWIM_LAB_8\\pwa\\PwaClient\\PwaClient.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Sebastian\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.14\\microsoft.aspnetcore.authorization.7.0.14.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.14\\microsoft.aspnetcore.components.7.0.14.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.14\\microsoft.aspnetcore.components.analyzers.7.0.14.nupkg.sha512",
+    "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\7.0.8\\microsoft.aspnetcore.components.authorization.7.0.8.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.14\\microsoft.aspnetcore.components.forms.7.0.14.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.14\\microsoft.aspnetcore.components.web.7.0.14.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.14\\microsoft.aspnetcore.components.webassembly.7.0.14.nupkg.sha512",

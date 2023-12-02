@@ -1,6 +1,8 @@
 @page "/rams/update/{name}"
 @inject HttpClient HttpClient
 
+@attribute [Authorize]
+
 <h1>Update Ram</h1>
 
 @if (isFormSubmitted)
