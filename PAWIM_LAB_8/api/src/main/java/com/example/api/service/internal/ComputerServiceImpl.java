@@ -44,7 +44,7 @@ public class ComputerServiceImpl implements ComputerService {
 
     @Override
     public void updateComputer(String name, ComputerDto computerDto) {
-        if (name.isEmpty() || name == null)
+        if (name == null || name.isEmpty())
             throw new IllegalArgumentException("name cannot be null");
         Computer computer = findComputerByName(name);
         updateComputer(computer, computerDto);
@@ -53,7 +53,7 @@ public class ComputerServiceImpl implements ComputerService {
 
     @Override
     public void deleteComputer(String name) {
-        if (name.isEmpty() || name == null)
+        if (name == null || name.isEmpty())
             throw new IllegalArgumentException("name cannot be null");
         Computer computer = findComputerByName(name);
         computerRepository.delete(computer);

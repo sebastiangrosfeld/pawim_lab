@@ -1,1 +1,9 @@
-
+security:
+  jwt:
+    auth_header: Authorization
+    bearer_prefix: "Bearer "
+    expiration: 10800000
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
