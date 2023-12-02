@@ -1,0 +1,118 @@
+@page "/computers/update/{name}"
+@inject HttpClient HttpClient
+
+<h1>Update Computer</h1>
+
+@if (isFormSubmitted)
+{
+    <p>Success</p>
+    <a class="btn btn-success" href="/computers">Go back</a>
+}
+else if (rams == null || gpus == null)
+{
+    <p><em>Page is loading...</em></p>
+}
+else
+{
+    <form @onsubmit="SubmitForm">
+    <div class="mb-3">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" id="name" @bind="computerForm.Name" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="type">Type</label>
+        <input class="form-control" id="type" @bind="computerForm.Type" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="enclosureName">Enclosure Name</label>
+        <input class="form-control" id="enclosureName" @bind="computerForm.EnclosureName" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="cpuName">CPU Name</label>
+        <input class="form-control" id="cpuName" @bind="computerForm.CpuName" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="ramName">RAM</label>
+        <select class="form-select" id="ramName" @bind="computerForm.RamName">
+            <option value="">Choose RAM</option>
+            @foreach (var ram in rams)
+                {
+                    <option value="@ram.Name">@ram.Name</option>
+                }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="hardDiskCapacity">Hard Disk Capacity [GB]</label>
+        <input class="form-control" id="hardDiskCapacity" @bind="computerForm.HardDiskCapacity" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="gpuName">GPU</label>
+        <select class="form-select" id="gpuName" @bind="computerForm.GpuName">
+            <option value="">Choose GPU</option>
+            @foreach (var gpu in gpus)
+                {
+                    <option value="@gpu.Name">@gpu.Name</option>
+                }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="powerSupply">Power Supply [W]</label>
+        <input class="form-control" id="powerSupply" @bind="computerForm.PowerSupply" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="price">Price</label>
+        <input class="form-control" id="price" @bind="computerForm.Price" type="text">
+    </div>
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-secondary" href="/computers">Cancel</a>
+            <button class="btn btn-primary ms-3" type="submit">Submit</button>
+        </div>
+    </form>
+}
+
+@code {
+    [Parameter]
+    public string? name {get; set;}
+
+    private ComputerForm computerForm = new ComputerForm();
+    private List<Ram>? rams;
+    private List<Gpu>? gpus;
+    private bool isFormSubmitted = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var computer = await HttpClient.GetFromJsonAsync<Computer>(Constants.ComputersUrl + "/" + name);
+        computerForm.Name = computer.Name;
+        computerForm.Type = computer.Type;
+        computerForm.EnclosureName = computer.EnclosureName;
+        computerForm.CpuName = computer.CpuName;
+        computerForm.RamName =computer.Ram.Name;
+        computerForm.HardDiskCapacity = computer.HardDiskCapacity;
+        computerForm.GpuName = computer.Gpu.Name;
+        computerForm.PowerSupply = computer.PowerSupply;
+        computerForm.Price = computer.Price;
+
+        rams = await HttpClient.GetFromJsonAsync<List<Ram>>(Constants.RamsUrl);
+        gpus = await HttpClient.GetFromJsonAsync<List<Gpu>>(Constants.GpusUrl);
+    }
+
+    private async Task SubmitForm()
+    {
+        var compRam = rams.First<Ram>(ram => ram.Name == computerForm.RamName);
+        var compGpu = gpus.First<Gpu>(gpu => gpu.Name == computerForm.GpuName);
+
+        var computer = new Computer(
+            computerForm.Name,
+            computerForm.Type,
+            computerForm.EnclosureName,
+            computerForm.CpuName,
+            compRam,
+            computerForm.HardDiskCapacity,
+            compGpu,
+            computerForm.PowerSupply,
+            computerForm.Price
+            );
+        await HttpClient.PutAsJsonAsync(Constants.ComputersUrl + "/" + name, computer);
+        isFormSubmitted = true;
+    }
+}
