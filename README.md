@@ -8,3 +8,4 @@ Projekty laboratoryjne z zajęć "Programowanie aplikacji mobilnych i webowych, 
 * lab_5 : https://youtu.be/tpONQCycipE
 * lab_6 : https://youtu.be/TD_5G8-i0yg
 * lab_7 : https://youtu.be/IeYx-oYfuEI
+* lab_8 : https://youtu.be/_XlJfFdiPX0
