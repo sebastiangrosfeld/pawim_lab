@@ -30,7 +30,7 @@ public class AuthorizationController {
         return ResponseEntity.status(HttpStatusCode.valueOf(201)).build();
     }
 
-    @PatchMapping("/change-password")
+    @PostMapping("/change-password")
     public ResponseEntity<Void> changePassword(@RequestBody @Valid ChangePasswordRequest changePasswordRequest) {
         authService.changePassword(changePasswordRequest);
         return ResponseEntity.noContent().build();

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="915.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_app.viewModel.ComputerViewModel">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <VBox alignment="CENTER" prefHeight="94.0" prefWidth="619.0">
+      <children>
+         <Label prefHeight="21.0" prefWidth="311.0" text="Aplikacja Computer" textFill="#1022c7fc">
+            <font>
+               <Font size="36.0" />
+            </font>
+         </Label>
+         <Button mnemonicParsing="false" onAction="#onLogoutClick" text="Logout">
+            <VBox.margin>
+               <Insets left="700.0" />
+            </VBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#onChangePasswordClick" text="Change Password">
+            <VBox.margin>
+               <Insets left="700.0" top="5.0" />
+            </VBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#onWeatherClick" prefHeight="39.0" prefWidth="149.0" text="Weather App">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+      </children>
+   </VBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="619.0" spacing="110.0">
+      <padding>
+         <Insets left="40.0" right="70.0" />
+      </padding>
+      <children>
+         <TextField fx:id="fxName" promptText="NAME" />
+         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="490.0" text="Computers">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox prefHeight="419.0" prefWidth="822.0" spacing="20.0">
+      <children>
+         <VBox alignment="CENTER" prefHeight="324.0" prefWidth="254.0" spacing="10.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#onGetAllComputersButtonClick" prefHeight="38.0" prefWidth="134.0" text="Get All Computers" />
+               <Button mnemonicParsing="false" onAction="#onCreateEditClick" prefHeight="38.0" prefWidth="136.0" text="Create Computer" />
+               <Button mnemonicParsing="false" onAction="#onCreateEditClick" prefHeight="38.0" prefWidth="136.0" text="Edit Computer" />
+               <Button mnemonicParsing="false" onAction="#onGetComputerButtonClick" prefHeight="38.0" prefWidth="137.0" text="Get Computer" />
+               <Button mnemonicParsing="false" onAction="#onDeleteComputerButtonClick" prefHeight="38.0" prefWidth="173.0" text="Delete Computer" />
+               <Button mnemonicParsing="false" onAction="#onDeleteAllComputersButtonClick" prefHeight="38.0" prefWidth="164.0" text="Delete All Computers" />
+            </children>
+            <opaqueInsets>
+               <Insets bottom="20.0" top="20.0" />
+            </opaqueInsets>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </VBox>
+         <VBox prefHeight="422.0" prefWidth="598.0">
+            <children>
+               <TableView fx:id="fxTable" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="279.0" prefWidth="598.0">
+                  <columnResizePolicy>
+                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                  </columnResizePolicy>
+                  <VBox.margin>
+                     <Insets bottom="50.0" />
+                  </VBox.margin>
+               </TableView>
+               <Pagination fx:id="fxPagination" prefHeight="52.0" prefWidth="598.0" />
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="875.0">
+      <padding>
+         <Insets right="120.0" />
+      </padding>
+   </HBox>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>
