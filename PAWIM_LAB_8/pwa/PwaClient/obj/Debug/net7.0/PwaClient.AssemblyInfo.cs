@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PwaClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e59278294029f5f5563379366176819cf2ed2d86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b0f54d5da5904f022bf26fbe53f9e178d570b32")]
 [assembly: System.Reflection.AssemblyProductAttribute("PwaClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PwaClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
