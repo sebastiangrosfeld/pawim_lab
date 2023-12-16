@@ -1,6 +1,7 @@
 package com.example.api.dataFaker;
 
 import com.example.api.model.AppUser;
+import com.example.api.model.Roles;
 import com.example.api.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
@@ -20,6 +21,7 @@ public class UserSeeder implements Seeder{
         AppUser user = AppUser.builder()
                 .username("admin")
                 .password(encodedPassword)
+                .role(Roles.ADMIN)
                 .build();
         userRepository.save(user);
     }

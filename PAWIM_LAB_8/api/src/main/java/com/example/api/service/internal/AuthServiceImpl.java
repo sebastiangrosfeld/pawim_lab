@@ -5,6 +5,7 @@ import com.example.api.dto.AuthCredentialsDto;
 import com.example.api.dto.ChangePasswordRequest;
 import com.example.api.dto.TokenDto;
 import com.example.api.model.AppUser;
+import com.example.api.model.Roles;
 import com.example.api.repository.UserRepository;
 import com.example.api.service.AuthService;
 import io.jsonwebtoken.Jwts;
@@ -50,6 +51,7 @@ public class AuthServiceImpl implements AuthService, UserDetailsService {
         AppUser user = AppUser.builder()
                 .username(authCredentialsDto.username())
                 .password(encPassword)
+                .role(Roles.USER)
                 .build();
         userRepository.save(user);
     }

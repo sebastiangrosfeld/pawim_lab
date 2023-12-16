@@ -7,6 +7,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +21,7 @@ import java.util.List;
 public class ComputerController {
 
     private final ComputerService computerService;
+    private final UserDetailsService userDetailsService;
 
     @GetMapping
     ResponseEntity<List<ComputerDto>> getAllComputers() {
@@ -51,6 +55,11 @@ public class ComputerController {
 
     @DeleteMapping("/all")
     ResponseEntity<Void> deleteAllComputers() {
+        String principal  = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UserDetails userDetails = userDetailsService.loadUserByUsername(principal);
+        if (userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("USER"))) {
+            throw new IllegalStateException("Not permission for this operation");
+        }
         computerService.deleteAllComputers();
         return ResponseEntity.noContent().build();
     }

@@ -2,6 +2,7 @@ package com.example.api.controller;
 
 import com.example.api.dto.ComputerDto;
 import com.example.api.dto.RamDto;
+import com.example.api.service.AuthService;
 import com.example.api.service.ComputerService;
 import com.example.api.service.RamService;
 import jakarta.validation.Valid;
@@ -9,9 +10,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -20,6 +27,7 @@ import java.util.List;
 public class RamController {
 
     private final RamService ramService;
+    private final UserDetailsService userDetailsService;
 
     @GetMapping
     ResponseEntity<List<RamDto>> getAllRams() {
@@ -53,6 +61,11 @@ public class RamController {
 
     @DeleteMapping("/all")
     ResponseEntity<Void> deleteAllRams() {
+        String principal  = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UserDetails userDetails = userDetailsService.loadUserByUsername(principal);
+        if (userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("USER"))) {
+            throw new IllegalStateException("Not permission for this operation");
+        }
         ramService.deleteAllRams();
         return ResponseEntity.noContent().build();
     }
